@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  tetflix-frontend:
+    image: abzed/tetflix-frontend
+    ports:
+      - "3001:3001"
+    restart: always
+    depends_on:
+      - tetflix-backend
+
+  tetflix-backend:
+    image: abzed/tetflix-backend
+    ports:
+      - "3000:3000"
+    restart: always
